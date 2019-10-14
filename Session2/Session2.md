@@ -8,7 +8,7 @@
 
 ---
 
-Receptive Field. 
+### Receptive Field. 
 
 ---
 
@@ -35,7 +35,7 @@ Adding channels into the mix of convolution.
 
 # Parameters Visualized
 
-#### Number of Parameters in each step.
+### Number of Parameters in each step.
 
 | Step | Image          | Kernel         | Parameters                  |
 | ---- | -------------- | -------------- | --------------------------- |
@@ -77,3 +77,66 @@ Adding channels into the mix of convolution.
 
 ---
 
+### Number of Images in GPU
+
+| Step | Image          | Kernel         | Parameters                  | Number of Images |
+| ---- | -------------- | -------------- | --------------------------- | ---------------- |
+| 1    | (28 * 28) * 1  | (3 * 3) * 32   | (3 * 3) * 32 * 1 + 32 = 320 | 32               |
+| 2    | (26 * 26) * 32 | (3 * 3) * 64   | (3 * 3) * 64 * 32 + 64      | 64               |
+| 3    | (24 * 24) * 64 | (3 * 3 ) * 128 | (3 * 3) * 128 * 64 + 128    | 128              |
+| 4    | (22 * 22) *128 | (3 * 3 ) * 256 | (3 * 3) * 256 * 128 + 256   | 256              |
+| 5    | (20 * 20) *256 | (3 * 3 ) * 512 | (3 * 3) * 512 * 256 + 512   | 512              |
+
+**We have 32 + 64  + 128 + 256 + 512 = 992  Images in GPU in just 5 Steps.**  
+
+**GPU will sing OOM.**
+
+and we have 94 more steps to go. Solution ?
+
+## Max Pooling
+
+Max of 2 * 2 kernel would shine maximum of 4 value and potray it and reduce the image size to half and increase the receptive field by double.
+
+
+
+**400x400**x3   | (3x3x3)x32    | 398x398x32   RF of 3x3
+
+CONVOLUTION BLOCK 1 BEGINS
+     398x398x32  | (3x3x32)x64   | 396x396x64  RF of 5X5
+     396x396x64  | (3x3x64)x128  | 394x394x128 RF of 7X7
+     394x394x128 | (3x3x128)x256 | 392x392x256 RF of 9X9
+     392x392x256 | (3x3x256)x**512** | 390x390x512 RF **of 11X11**
+
+CONVOLUTION BLOCK 1 ENDS
+
+ 
+
+TRANSITION BLOCK 1 BEGINS
+     MAXPOOLING(2x2)
+     195x195x512 | **(1x1x512)x32**  | 195x195x32 RF of 22x22
+TRANSITION BLOCK 1 ENDS
+
+ 
+
+CONVOLUTION BLOCK 2 BEGINS
+     195x195x32   |(3x3x32)x64    | 193x193x64   RF of 24x24
+     193x193x64   |(3x3x64)x128   | 191x191x128  RF of 26x26
+     191x191x128  |(3x3x128)x256  | 189x189x256  RF of 28x28
+     189x189x256  |(3x3x256)x512  | 187x187x512  RF of 30x30
+CONVOLUTION BLOCK 2 ENDS
+
+ 
+
+TRANSITION BLOCK 2 BEGINS
+     MAXPOOLING(2x2)
+     93x93x512 | **(1x1x512)x32**  | 93x93x32 RF of 60x60
+TRANSITION BLOCK 2 ENDS
+
+ 
+
+CONVOLUTION BLOCK 3 BEGINS
+     93x93x32 | (3x3x32)x64 | 91x91x64    RF of 62x62
+
+ and so on...
+
+---
