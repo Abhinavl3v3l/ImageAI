@@ -4,9 +4,7 @@
 
 ## Fully Connected Layers
 
-2D to 1D is bad. Computationally expensive and not very accurate.  
-
-A vertical and  45 degree edge can give same answer by flattening the image.
+2D to 1D is bad. Computationally expensive and not very accurate.  For example - A vertical and  45 degree edge can give same answer by flattening the image.
 
 Extending to next layer will give us Fully connected layer. 
 
@@ -37,11 +35,30 @@ Train a model where difference is  high between prediction
 
 ## 8 codes for  NN
 
-Global Average Pooling.
+Global Average Pooling. is good good.
 
 
 
 
+
+**BATCH NORMALIZTION** - Normalizing image 
+
+
+
+ **Over Fitting** - When training accuracy is greater than validation accuracy.
+
+An image with multiple objects - example of frog and BMW.
+
+**DROPOUT.** - From each layer decide not to include  a few pixels or neurons while training.
+
+What's happening is that model is not learning some part or object, or model is not learning some features. But still categorizing the image correctly.
+
+
+As a result model sees incomplete objects and learn that this image is one of the label.
+
+Its good when we have some parts that are hidden of an object. for example face of dog is hidden behind a sofa then. Dropout will help to recognize the dog even when we have not seen the complete image.
+
+**Learning Rate** -
 
 ## Assignment
 
