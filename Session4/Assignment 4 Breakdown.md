@@ -101,5 +101,77 @@ Epoch 20/20
 
 ---
 
-### 2
+### 2 Decided Architecture. 
+
+~~~python
+from keras.layers import Activation
+model = Sequential()
+
+
+model.add(Convolution2D(10, (3, 3), activation='relu', input_shape=(28,28,1)))#26  
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(Convolution2D(16, (3, 3), activation='relu'))  #24
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(Convolution2D(10, 1, activation='relu'))
+
+model.add(Convolution2D(20, (3, 3), activation='relu'))  #22
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+
+model.add(MaxPooling2D(pool_size=(2, 2))) #11
+
+model.add(Convolution2D(10, (3, 3), activation='relu'))  #9
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+
+model.add(Convolution2D(16, (3, 3), activation='relu'))  #7
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(Convolution2D(10, 1, activation='relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(Convolution2D(16, (3, 3), activation='relu'))  #5
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(Convolution2D(16, (3, 3), activation='relu'))  #3
+model.add(BatchNormalization())
+model.add(Dropout(0.1))
+
+model.add(Convolution2D(10, 3))
+model.add(Flatten())
+model.add(Activation('softmax'))		
+~~~
+
+~~~txt
+Total params: 12,664
+Trainable params: 12,436
+Non-trainable params: 228
+~~~
+
+
+
+
+
+---
+
+Lets try between Starting  Extreme ends and then move towards higher values max = 16
+
+1. 5,8,10, 1x1,12,14,16,  max pool,  16, 18, 20, 1x1
+2. 8, 10, 1x1,16, 18, max pool , between 16 and 20
+3.  8, 10, 1x1,16, 18, max pool , 16 16 16 
+4. 16 and above
+5. 
+
+---
+
+### 3
 
