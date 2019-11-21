@@ -20,3 +20,7 @@ Session 6
 
  We get a receptive field of 3x3 when we convolve by 3x3. What should we do to get a receptive field of 5x5 when we convolve by 3x3?  
 
+#### Atrous Convolution  or Dilated Convolution 
+
+
+
