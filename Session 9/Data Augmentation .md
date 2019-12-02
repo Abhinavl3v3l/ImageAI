@@ -40,11 +40,15 @@ We can learn to read from right to left, but its no more use than a party trick.
 
 But we can choose which of these classes we want to flip. Like omiting the w and m in the MNIST dataset or car in CIFAR-10
 
-
-
-
-
 PMDA is altering the entire image but not focusin on any of the object in the image. 
 
 
+
+
+
+
+
+
+
+___
 
