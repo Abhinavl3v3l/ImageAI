@@ -63,15 +63,11 @@ Visualize Normalization.
 2.  Sub mean from whole data set
 3. Divide Image by standard deviation
 
-
-
-
-
 ---
 
 
 
-How to Normalize data -
+#### How to Normalize data -
 
 Mean of image - Sub all pixel and divide by number   of pixel 
 
@@ -117,3 +113,20 @@ Similarly before feeding  input $x$  to hypothesis function we normalize it usin
 $$
 \hat y = (\frac{x-\mu}{\sigma})p \label 3
 $$
+
+This decay is applied to loss.
+
+
+
+## L2 Regularization 
+
+Loss  = ($y-\hat y$)
+
+**L2 Regularization** 
+
+Loss  = (Truth  - (Hypothesis Function)) - L2 Regularization 
+
+Loss  = ($y$- $\hat y$) - $(\frac{\lambda}{2*m})||w^2||$
+
+---
+
