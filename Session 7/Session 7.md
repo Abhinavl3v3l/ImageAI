@@ -31,6 +31,16 @@ Object size is small what to do ?
 Where dog might come.
 
 1. Not RF but where might dog come in a picture. - Huge variation in location of information, choosing the right kernel size is tough.
-2. 
 
- 
+   
+
+Inception also reduces picture to dimension of 56 and then inception starts.
+
+Inception V1 concatenates multiple convolution nodes. 
+
+A convolution layers while learning the feature also throws the features out which are not useful.
+
+If 1 3  5 can figure this out. 
+
+
+
