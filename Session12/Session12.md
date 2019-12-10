@@ -18,3 +18,21 @@ If set too low - Time consuming due to small weights updates.
 
 
 
+
+
+How  to reach super convergence ?
+
+By finding optimal learning rate.  An optimal learning rate will decrease the loss significantly 
+
+
+
+A systematic approach would be  by finding relation between learning rate and loss obtained wrt that learning rate. 
+
+​	Learning rate : Loss
+
+if 100K images and batch size of 100 we will run it 1000 times or 1000 Iterations 
+
+
+
+
+
