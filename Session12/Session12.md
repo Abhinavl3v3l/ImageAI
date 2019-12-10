@@ -36,3 +36,4 @@ if 100K images and batch size of 100 we will run it 1000 times or 1000 Iteration
 
 
 
+![i](C:\Users\level\Documents\GitHub\ImageAI\Session12\i.PNG)
