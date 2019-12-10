@@ -128,3 +128,25 @@ Where will Annealing fail, with a LARGE LR we might push $\theta$ further away f
 
 
 
+![](2.PNG)
+
+
+
+Insert 3
+
+A cycle  has two step  going up and going down.  Length of a cycle is number of iterations performed doing 2 steps.
+
+A cycle is performed using measure of max_lr and min_lr
+
+Plot a graph between Loss and LR for 1/3 of the data set.
+
+
+
+Hence ,
+
+1. Plot loss again LR.
+
+2. Pick LR where loss is lowest.
+3. Then divide that number/LR by 10.
+4. Shuffle between those two numbers.
+
