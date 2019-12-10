@@ -36,4 +36,48 @@ if 100K images and batch size of 100 we will run it 1000 times or 1000 Iteration
 
 
 
-![i](C:\Users\level\Documents\GitHub\ImageAI\Session12\i.PNG)
+![i](i.PNG)
+
+As the Iteration increases the learning rate changes and with change in learning rate there is change in losses.
+
+
+
+- With change in Iteration there is changes in learning rate. The change in learning rate can be linear or exponential.
+
+- With change in learning rate there is change in losses.
+
+
+
+Setup 
+
+1. Weights are random
+2. Batch may change
+3. Only Learning rate changes.
+4. Loss is calculated 
+5.  Iteration vs learning rate vs losses is calculated.
+6. BP is not applied
+7. BP is not applied is a LIE
+
+
+
+Because  if we don't apply BP  our loss is constant for constant values of  W, $\theta$ , $R$ .
+
+So we do use BP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+So, my question here is the 
