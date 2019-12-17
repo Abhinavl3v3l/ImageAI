@@ -185,3 +185,5 @@ Total number of epochs we dont know.
 why go to Lr_max so that we dont jump out of deeper minimas
 
 ![](6.png)
+
+![7](7.png)
