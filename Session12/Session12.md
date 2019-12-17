@@ -150,3 +150,38 @@ Hence ,
 3. Then divide that number/LR by 10.
 4. Shuffle between those two numbers.
 
+
+
+---
+
+## One Cylic Learning Rate
+
+Very Fast, Same accuracy  or better as CLR with just one cycle.
+
+Spent more time learning, to figure out hyperparameters to train model fast.
+
+Why train faster ? Competition yes. 
+
+Companies ? - Traing New DS for and hour to figure out if a certain maximum accuracy possible. 
+
+A company rather than spending time on training to maximize accuracy can use OClr  and fine tune learning parameter and run using that LR to attain maximum accuracy.
+
+
+
+
+
+LR_max  = is fugured
+
+What we know and what we dont know.
+
+Total number of epochs we dont know.
+
+ 
+
+![4](4.png)
+
+![](5.png)
+
+why go to Lr_max so that we dont jump out of deeper minimas
+
+![](6.png)
