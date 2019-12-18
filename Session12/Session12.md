@@ -154,7 +154,7 @@ Hence ,
 
 ---
 
-## One Cylic Learning Rate
+## One Cyclic Learning Rate
 
 Very Fast, Same accuracy  or better as CLR with just one cycle.
 
@@ -187,3 +187,18 @@ why go to Lr_max so that we dont jump out of deeper minimas
 ![](6.png)
 
 ![7](7.png)
+
+We want to stay in largest dips and don't want to go out while performing ONE Cyclic Policies.
+
+
+
+
+
+----
+
+
+
+
+
+
+
