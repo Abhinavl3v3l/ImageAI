@@ -132,7 +132,7 @@ Where will Annealing fail, with a LARGE LR we might push $\theta$ further away f
 
 
 
-Insert 3
+![3](3.png)
 
 A cycle  has two step  going up and going down.  Length of a cycle is number of iterations performed doing 2 steps.
 
