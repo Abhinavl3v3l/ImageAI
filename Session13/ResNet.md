@@ -30,3 +30,15 @@ Each of these 32 kernles will conv0
 
 
 
+
+
+
+
+
+
+----
+
+LSTM
+
+
+
